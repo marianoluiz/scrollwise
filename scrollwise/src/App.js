@@ -3,8 +3,12 @@ import { firestore } from "./firebase";
 import { collection, query, orderBy, limit, getDocs, setDoc, doc, serverTimestamp, where } from "firebase/firestore";
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
+import './assets/App.css';
 
 export default function App() {
+
+  /* iwag functions and states */
+
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [chartData, setChartData] = useState({ labels: [], datasets: [] });
@@ -88,40 +92,62 @@ export default function App() {
     },
   };
 
+  /* iwag functions and states end*/
+
   return (
-    <div style={{ padding: '20px' }}>
-      <h1>Submit Your Email</h1>
-      <form onSubmit={handleSubmit}>
-        <div style={{ marginBottom: '10px' }}>
-          <label>
-            Name:
-            <input
-              type="text"
-              value={name}
-              onChange={(e) => setName(e.target.value)}
-              required
-              style={{ marginLeft: '10px' }}
-            />
-          </label>
-        </div>
-        <div style={{ marginBottom: '10px' }}>
-          <label>
-            Email:
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-              style={{ marginLeft: '10px' }}
-            />
-          </label>
-        </div>
-        <button type="submit">Submit</button>
-      </form>
-      <div style={{ marginTop: '40px' }}>
-        <h2>Count Over Time (Last 10 Minutes)</h2>
-        <Line data={chartData} options={chartOptions} />
+    <>
+
+
+
+   
+
+    <body className="app">
+
+      {/* navbar */}
+    <nav className="navbar navbar-expand-lg pt-md-4" id="nav">
+    <div className="container-fluid">
+      <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span className="navbar-toggler-icon"></span>
+      </button>
+      <div className="collapse navbar-collapse d-md-flex justify-content-md-between ms-md-5 " id="navbarNav">
+        
+        <ul className="navbar-nav d-md-flex gap-md-5 px-3 py-1" id="left-nav">
+          <li className="nav-item fw-bold mx-md-4">
+            <a className="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+          <li className="nav-item fw-bold mx-md-4">
+            <a className="nav-link" href="#">About</a>
+          </li>
+          <li className="nav-item fw-bold mx-md-4">
+            <a className="nav-link" href="#">Contact</a>
+          </li>
+        </ul>
+
+        <button className="btn fw-bold" id="right-nav">
+            <a className="nav-link">Learn More</a>
+        </button>
       </div>
     </div>
+    </nav>
+  {/* navbar end */}
+
+    
+    <div className="container-fluid w-100 mt-5 bg-primary" id="landing-design">
+      <div className="scrollwise-set1">
+        <div className="scrollwise-style1"></div>
+        <div className="scrollwise-style2 top"></div>
+      </div>
+      <div className="scrollwise-set2">
+        <div className="scrollwise-style2 bot"></div>
+        <div className="scrollwise-style1"></div>
+      </div>
+
+    </div>
+    {/* fetch the num of shit */}
+    <p className="text-center mt-5 fs-5">Join the growing community of <span id="dynamic-registered">10</span> interested learners</p>
+    </body>
+
+
+    </>
   );
 }

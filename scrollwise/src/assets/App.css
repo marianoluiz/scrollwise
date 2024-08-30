@@ -1,0 +1,116 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box !important;
+}
+
+body {
+  background-color: #FDFFEA;
+}
+
+#nav {
+  background-color: transparent !important;
+  overflow-x: hidden;
+}
+
+#left-nav {
+  background-color: #9BEC00;
+  border-radius: 2.5em; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#right-nav {
+  background-color: #F3FF90;
+  border-top-left-radius: 2.5em;
+  border-bottom-left-radius: 2.5em;
+  padding-right: 3.125em;
+  padding-left: 3.125em;
+  margin-right: -11px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#landing-design {
+  margin: 0;
+  padding: 0;
+  height: 50vh;
+  width: 100%;
+  background-image: url('./image/landing-design.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.scrollwise-set1{
+  height: 50%;
+  width: 50%;
+}
+.scrollwise-set2 {
+  height: 50%;
+  width: 50%;
+  margin-left: 50% !important;
+}
+.scrollwise-style1 {
+  height: 50%;
+  width: 100%;
+  background-image: url('./image/scrollwise-style-1.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+}
+
+.scrollwise-style2 {
+  height: 50%;
+  width: 100%;
+  background-image: url('./image/scrollwise-style-2.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* marquee issue */
+
+.scrollwise-style2 .top {
+  height: 50%;
+  width: 100%;
+  background-image: url('./image/scrollwise-style-2.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: marqueeLeftToRight 10s linear infinite; /* Apply infinite marquee animation */
+}
+
+.scrollwise-style2 .bot {
+  height: 50%;
+  width: 100%;
+  background-image: url('./image/scrollwise-style-2.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: marqueeRightToLeft 10s linear infinite; /* Apply infinite marquee animation */
+}
+
+
+@keyframes marqueeLeftToRight {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes marqueeRightToLeft {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+/* marquee issue end */
+
+#dynamic-registered {
+  color: #06D001;
+  font-weight: bold;
+}
