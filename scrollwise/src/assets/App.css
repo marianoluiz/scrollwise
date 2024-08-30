@@ -11,6 +11,7 @@ body {
 #nav {
   background-color: transparent !important;
   overflow-x: hidden;
+  font-family: Helvetica, Arial, sans-serif;
 }
 
 #left-nav {
@@ -23,8 +24,7 @@ body {
   background-color: #F3FF90;
   border-top-left-radius: 2.5em;
   border-bottom-left-radius: 2.5em;
-  padding-right: 3.125em;
-  padding-left: 3.125em;
+  padding: 1em 5em ;
   margin-right: -11px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -32,12 +32,13 @@ body {
 #landing-design {
   margin: 0;
   padding: 0;
-  height: 50vh;
+  height: 40vh;
   width: 100%;
   background-image: url('./image/landing-design.svg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow: hidden;
 }
 .scrollwise-set1{
   height: 50%;
@@ -67,35 +68,14 @@ body {
   background-repeat: no-repeat;
 }
 
-/* marquee issue */
 
-.scrollwise-style2 .top {
-  height: 50%;
-  width: 100%;
-  background-image: url('./image/scrollwise-style-2.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: marqueeLeftToRight 10s linear infinite; /* Apply infinite marquee animation */
-}
-
-.scrollwise-style2 .bot {
-  height: 50%;
-  width: 100%;
-  background-image: url('./image/scrollwise-style-2.svg');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  animation: marqueeRightToLeft 10s linear infinite; /* Apply infinite marquee animation */
-}
-
-
+/* marquee start */
 @keyframes marqueeLeftToRight {
   0% {
     transform: translateX(-100%);
   }
   100% {
-    transform: translateX(100%);
+    transform: translateX(200%);
   }
 }
 
@@ -104,13 +84,75 @@ body {
     transform: translateX(100%);
   }
   100% {
-    transform: translateX(-100%);
+    transform: translateX(-200%);
   }
 }
 
-/* marquee issue end */
+.scrollwise-style2.top {
+  height: 50%;
+  width: 100%;
+  background-image: url('./image/scrollwise-style-2.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: marqueeLeftToRight 8s linear infinite;
+}
 
+.scrollwise-style2.bot {
+  height: 50%;
+  width: 100%;
+  background-image: url('./image/scrollwise-style-2.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  animation: marqueeRightToLeft 8s linear infinite; /* Apply infinite marquee animation */
+}
+
+/* marquee end */
+
+#headline {
+  font-size: 1.5em;
+  font-family: 'Catamaran', sans-serif;
+}
 #dynamic-registered {
   color: #06D001;
   font-weight: bold;
+}
+
+/* about */
+#about-title {
+  background-color: #F3FF90;
+  border-top-right-radius: 2.5em;
+  border-bottom-right-radius: 2.5em;
+  padding: 1em 5em ;
+  position: absolute;
+  left: 0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  font-weight: bold;
+  color: #1E400F;
+}
+#about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #9BEC00;
+  box-shadow: 
+  inset 0 0 0 25px #9BEC00, /* Gap color same as background */
+  inset 0 0 0 30px #F3FF90; /* Inner border */
+  border-radius: 15px; /* Adjust the radius as needed */
+}
+
+#about-container p {
+  padding: 50px 80px;
+  text-align: left;
+  font-weight: 300;
+  font-size: 2em;
+  font-family: 'Catamaran', sans-serif;
+  flex: 1;
+}
+#about-container img {
+  width: 600px;
+  height: 700px;
+  flex: 1;
 }

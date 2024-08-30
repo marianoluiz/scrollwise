@@ -4,6 +4,8 @@ import { collection, query, orderBy, limit, getDocs, setDoc, doc, serverTimestam
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import './assets/App.css';
+import phoneMockup from './assets/image/phone-mockup.svg';
+
 
 export default function App() {
 
@@ -97,10 +99,6 @@ export default function App() {
   return (
     <>
 
-
-
-   
-
     <body className="app">
 
       {/* navbar */}
@@ -131,7 +129,7 @@ export default function App() {
     </nav>
   {/* navbar end */}
 
-    
+    {/* landing page design */}
     <div className="container-fluid w-100 mt-5 bg-primary" id="landing-design">
       <div className="scrollwise-set1">
         <div className="scrollwise-style1"></div>
@@ -141,10 +139,24 @@ export default function App() {
         <div className="scrollwise-style2 bot"></div>
         <div className="scrollwise-style1"></div>
       </div>
+  
+    </div>
+
+    {/* fetch the num  */}
+    <p className="text-center mt-5" id="headline">Join the growing community of <span id="dynamic-registered">10</span> interested learners</p>
+
+
+    <div className="mt-5">
+      <div id="about-title">What is ScrollWise?</div>
+      <div className="container" id="about-container">
+        <p>ScrollWise is a web3 platform designed to transform mindless scrolling into purposeful learning. It provides a personalized, next-generation educational experience that leverages adaptive content to engage learners</p>
+        <img src={phoneMockup} alt="iphone mockup" />
+
+
+      </div>
+
 
     </div>
-    {/* fetch the num of shit */}
-    <p className="text-center mt-5 fs-5">Join the growing community of <span id="dynamic-registered">10</span> interested learners</p>
     </body>
 
 
