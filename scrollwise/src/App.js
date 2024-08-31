@@ -176,7 +176,7 @@ export default function App() {
         {/* demo */}
         <div id="demo-container">
           <div className="vid-container d-flex justify-content-center">
-            <video height="600" id="video-playing" controls autoPlay loop muted>
+            <video height="600" id="video-playing" autoPlay loop muted>
               <source src={demoVideo} type="video/mp4" />
               Your browser does not support the video tag.
             </video>
