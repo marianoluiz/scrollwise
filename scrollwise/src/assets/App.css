@@ -34,6 +34,7 @@ body {
   padding: 0;
   height: 60vh;
   width: 100%;
+  background-color: #9BEC00;
   background-image: url('./image/landing-design.svg');
   background-size: cover;
   background-position: center;
@@ -169,14 +170,14 @@ body {
   flex: 1.5;
 }
 
-#demo-container div {
+#demo-container #more-container {
   flex: 1.5;
 }
 #learn-more {
   font-size: 28px;
   color: #1E400F;
   font-weight: 700;
-  margin-left: 25px;
+  margin-left: 40px;
 }
 #main-cto {
   border-radius: 2.5em;
@@ -186,9 +187,9 @@ body {
   color: #F3FF90;
   background-color: #1E400F;
   width: 60%;
-  margin-left: 25px;
+  margin-left: 40px;
 }
-#more-container {
+#more-container-inner {
   background-image: url('./image/bg-learn-more.svg');
   background-size: cover;
   background-position: center;
@@ -196,4 +197,12 @@ body {
   height: 50vh;
   border-top-left-radius: 2.5em;
   border-bottom-left-radius: 2.5em;
+}
+#video-playing {
+  border-radius: 25px;
+}
+
+/* WebKit-based browsers (Chrome, Safari) */
+::-webkit-scrollbar {
+  display: none;
 }

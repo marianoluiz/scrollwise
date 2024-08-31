@@ -118,7 +118,7 @@ export default function App() {
             <a className="nav-link" href="#">About</a>
           </li>
           <li className="nav-item fw-bold mx-md-4">
-            <a className="nav-link" href="#">Contact</a>
+            <a className="nav-link" href="#">Sign up</a>
           </li>
         </ul>
 
@@ -161,15 +161,17 @@ export default function App() {
 
     {/* demo */}
     <div id="demo-container">
-      <div className="vid-container d-flex justify-content-center  ">
-        <video height="600" className="rounded"  controls autoplay loop muted>
+      <div className="vid-container d-flex justify-content-center">
+        <video height="600" id="video-playing" controls autoplay loop muted>
           <source src={demoVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
       </div>
-      <div className="d-flex flex-column justify-content-center align-items-left" id="more-container">
-        <p id="learn-more">Learn More: </p>
-        <button id="main-cto">Download Project Description</button>
+      <div className="d-flex flex-column justify-content-center align-items-left" id="more-container" >
+        <div className=" d-flex flex-column align-items-left justify-content-center" id="more-container-inner">
+          <p id="learn-more">Learn More: </p>
+          <button id="main-cto">Download Project Description</button>
+        </div>
       </div>
     </div>
 
