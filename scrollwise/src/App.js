@@ -116,7 +116,7 @@ export default function App() {
     <>
       <body className="app">
         {/* navbar */}
-        <nav className="navbar navbar-expand-lg pt-md-4" id="nav">
+        <nav className="navbar navbar-expand-lg pt-md-4 " id="nav">
           <div className="container-fluid">
             <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
               <span className="navbar-toggler-icon"></span>
@@ -224,7 +224,7 @@ export default function App() {
 
       <footer className="container py-5">
         <hr/>
-        <div className="d-flex justify-content-between mt-2">
+        <div className="d-flex justify-content-between flex-column flex-md-row mt-2 gap-sm-3 gap-md-0">
           <span>Made with love, purpose, and care</span>
           <span>Hooked Unitour Hackathon 2024</span>
         </div>
