@@ -4,8 +4,9 @@ import { collection, query, orderBy, limit, getDocs, setDoc, doc, serverTimestam
 import { Line } from 'react-chartjs-2';
 import 'chart.js/auto';
 import './assets/App.css';
-import phoneMockup from './assets/image/phone-mockup.svg';
 
+import phoneMockup from './assets/image/phone-mockup.svg';
+import demoVideo from './assets/demo-vid.mp4';
 
 export default function App() {
 
@@ -130,7 +131,7 @@ export default function App() {
   {/* navbar end */}
 
     {/* landing page design */}
-    <div className="container-fluid w-100 mt-5 bg-primary" id="landing-design">
+    <div className="container-fluid w-100 mt-4 bg-primary" id="landing-design">
       <div className="scrollwise-set1">
         <div className="scrollwise-style1"></div>
         <div className="scrollwise-style2 top"></div>
@@ -145,11 +146,11 @@ export default function App() {
     {/* fetch the num  */}
     <p className="text-center mt-5" id="headline">Join the growing community of <span id="dynamic-registered">10</span> interested learners</p>
 
-
+    {/* about */}
     <div className="mt-5">
       <div id="about-title">What is ScrollWise?</div>
       <div className="container" id="about-container">
-        <p>ScrollWise is a web3 platform designed to transform mindless scrolling into purposeful learning. It provides a personalized, next-generation educational experience that leverages adaptive content to engage learners</p>
+        <p><strong>ScrollWise</strong> is a web3 platform designed to transform mindless scrolling into purposeful learning. It provides a personalized, next-generation educational experience that leverages adaptive content to engage learners</p>
         <img src={phoneMockup} alt="iphone mockup" />
 
 
@@ -157,9 +158,32 @@ export default function App() {
 
 
     </div>
+
+    {/* demo */}
+    <div id="demo-container">
+      <div className="vid-container d-flex justify-content-center  ">
+        <video height="600" className="rounded"  controls autoplay loop muted>
+          <source src={demoVideo} type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="d-flex flex-column justify-content-center align-items-left" id="more-container">
+        <p id="learn-more">Learn More: </p>
+        <button id="main-cto">Download Project Description</button>
+      </div>
+    </div>
+
+
     </body>
 
-
+      <footer className="container py-5">
+        <hr/>
+        <div className="d-flex justify-content-between mt-2">
+          <span>Made with love, purpose, and care</span>
+          <span>Hooked Unitour Hackathon 2024</span>
+        </div>
+        <div>Team Illumin</div>
+      </footer>
     </>
   );
 }

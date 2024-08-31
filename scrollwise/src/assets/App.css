@@ -32,7 +32,7 @@ body {
 #landing-design {
   margin: 0;
   padding: 0;
-  height: 40vh;
+  height: 60vh;
   width: 100%;
   background-image: url('./image/landing-design.svg');
   background-size: cover;
@@ -155,4 +155,45 @@ body {
   width: 600px;
   height: 700px;
   flex: 1;
+}
+
+/* demo section */
+#demo-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+
+
+#demo-container .vid-container {
+  flex: 1.5;
+}
+
+#demo-container div {
+  flex: 1.5;
+}
+#learn-more {
+  font-size: 28px;
+  color: #1E400F;
+  font-weight: 700;
+  margin-left: 25px;
+}
+#main-cto {
+  border-radius: 2.5em;
+  padding: 20px 30px;
+  border: none;
+  font-size: 24px;
+  color: #F3FF90;
+  background-color: #1E400F;
+  width: 60%;
+  margin-left: 25px;
+}
+#more-container {
+  background-image: url('./image/bg-learn-more.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 50vh;
+  border-top-left-radius: 2.5em;
+  border-bottom-left-radius: 2.5em;
 }
