@@ -35,7 +35,7 @@ body {
   height: 60vh;
   width: 100%;
   background-color: #9BEC00;
-  background-image: url('./image/landing-design.svg');
+  background-image: url('./image/landing-design.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@ body {
 .scrollwise-style1 {
   height: 50%;
   width: 100%;
-  background-image: url('./image/scrollwise-style-1.svg');
+  background-image: url('./image/scrollwise-style-1.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -63,7 +63,7 @@ body {
 .scrollwise-style2 {
   height: 50%;
   width: 100%;
-  background-image: url('./image/scrollwise-style-2.svg');
+  background-image: url('./image/scrollwise-style-2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -92,7 +92,7 @@ body {
 .scrollwise-style2.top {
   height: 50%;
   width: 100%;
-  background-image: url('./image/scrollwise-style-2.svg');
+  background-image: url('./image/scrollwise-style-2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -102,7 +102,7 @@ body {
 .scrollwise-style2.bot {
   height: 50%;
   width: 100%;
-  background-image: url('./image/scrollwise-style-2.svg');
+  background-image: url('./image/scrollwise-style-2.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -190,7 +190,7 @@ body {
   margin-left: 40px;
 }
 #more-container-inner {
-  background-image: url('./image/bg-learn-more.svg');
+  background-image: url('./image/bg-learn-more.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -205,4 +205,54 @@ body {
 /* WebKit-based browsers (Chrome, Safari) */
 ::-webkit-scrollbar {
   display: none;
+}
+
+body {
+  position: relative;
+  z-index: 1;
+}
+.circle-1 {
+  position: absolute;
+  right: 200px;
+  top: 580px;
+  z-index: -999;
+}
+#iphone-mockup {
+  z-index: 10;
+}
+.circle-2 {
+  position: absolute;
+  right: 160px;
+  top: 730px;
+  z-index: 9;
+}
+.circle-4 {
+  position: absolute;
+  right: 400px;
+  top: 1020px;
+  z-index: 9;
+}
+.circle-3 {
+  position: absolute;
+  left: 400px;
+  top: 1100px;
+  z-index: -1;
+}
+.circle-7 {
+  position: absolute;
+  left: 150px;
+  top: 1150px;
+  z-index: -2;
+}
+.circle-5{
+  position: absolute;
+  right: 15px;
+  top: 1450px;
+  z-index: -2;
+}
+.circle-6{
+  position: absolute;
+  left: 525px;
+  top: 1700px;
+  z-index: -2;
 }

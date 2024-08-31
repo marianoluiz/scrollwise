@@ -3,8 +3,17 @@ import { firestore } from "./firebase";
 import { collection, query, orderBy, limit, getDocs, setDoc, doc, serverTimestamp } from "firebase/firestore";
 import './assets/App.css';
 
-import phoneMockup from './assets/image/phone-mockup.svg';
+import phoneMockup from './assets/image/phone-mockup.png';
 import demoVideo from './assets/demo-vid.mp4';
+import circle1 from "./assets/image/circle-bg/circle-design-1.png";
+import circle2 from "./assets/image/circle-bg/circle-design-2.png";
+import circle3 from "./assets/image/circle-bg/ellipse-24.png";
+import circle4 from "./assets/image/circle-bg/ellipse-25.png";
+import circle5 from "./assets/image/circle-bg/ellipse-27.png";
+import circle6 from "./assets/image/circle-bg/ellipse-28.png";
+import circle7 from "./assets/image/circle-bg/ellipse-22.png";
+import pdf from "./scrollwise.pdf"
+
 
 export default function App() {
   const [name, setName] = useState('');
@@ -102,6 +111,7 @@ export default function App() {
     },
   };
 
+
   return (
     <>
       <body className="app">
@@ -151,8 +161,16 @@ export default function App() {
           <div id="about-title">What is ScrollWise?</div>
           <div className="container" id="about-container">
             <p><strong>ScrollWise</strong> is a web3 platform designed to transform mindless scrolling into purposeful learning. It provides a personalized, next-generation educational experience that leverages adaptive content to engage learners</p>
-            <img src={phoneMockup} alt="iphone mockup" />
-          </div>
+            <img src={phoneMockup} alt="iphone mockup" id="iphone-mockup" />
+          </div>  
+
+          <img className="circle circle-1" src={circle1}/>
+          <img className="circle circle-2" src={circle2}/>
+          <img className="circle circle-3" src={circle3}/>
+          <img className="circle circle-4" src={circle4}/>
+          <img className="circle circle-5" src={circle5}/>
+          <img className="circle circle-6" src={circle6}/>
+          <img className="circle circle-7" src={circle7}/>
         </div>
 
         {/* demo */}
@@ -166,7 +184,9 @@ export default function App() {
           <div className="d-flex flex-column justify-content-center align-items-left" id="more-container" >
             <div className=" d-flex flex-column align-items-left justify-content-center" id="more-container-inner">
               <p id="learn-more">Learn More: </p>
-              <button id="main-cto">Download Project Description</button>
+              <a href={pdf} download="scrollwise.pdf">
+              <button id="main-cto" >Download Project Description</button>
+              </a>
             </div>
           </div>
         </div>
