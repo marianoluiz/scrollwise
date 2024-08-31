@@ -115,7 +115,7 @@ export default function App() {
             <a className="nav-link" aria-current="page" href="#">Home</a>
           </li>
           <li className="nav-item fw-bold mx-md-4">
-            <a className="nav-link" href="#">About</a>
+            <a className="nav-link" href="#about-page">About</a>
           </li>
           <li className="nav-item fw-bold mx-md-4">
             <a className="nav-link" href="#">Sign up</a>
@@ -123,7 +123,7 @@ export default function App() {
         </ul>
 
         <button className="btn fw-bold" id="right-nav">
-            <a className="nav-link">Learn More</a>
+            <a className="nav-link" href="#demo-container">Learn More</a>
         </button>
       </div>
     </div>
@@ -147,7 +147,7 @@ export default function App() {
     <p className="text-center mt-5" id="headline">Join the growing community of <span id="dynamic-registered">10</span> interested learners</p>
 
     {/* about */}
-    <div className="mt-5">
+    <div id="about-page" className="mt-5">
       <div id="about-title">What is ScrollWise?</div>
       <div className="container" id="about-container">
         <p><strong>ScrollWise</strong> is a web3 platform designed to transform mindless scrolling into purposeful learning. It provides a personalized, next-generation educational experience that leverages adaptive content to engage learners</p>
