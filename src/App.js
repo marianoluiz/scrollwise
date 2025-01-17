@@ -2,6 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 import { firestore } from "./firebaseConfig";
 import { collection, query, orderBy, limit, getDocs, setDoc, doc, serverTimestamp } from "firebase/firestore";
 import './assets/css/App.css';
+import "./assets/css/media-query.css";
 
 import demoVideo from './assets/demo-vid.mp4';
 import phoneMockup from "./assets/image/phone-mockup.png";
@@ -29,14 +30,16 @@ export default function App() {
   const fetchRegisteredCount = async () => {
     const q = query(
       collection(firestore, "user-email"),
-      orderBy("count", "desc"),
+      orderBy("count", "desc"), // descending
       limit(1)
     );
 
-    const querySnapshot = await getDocs(q);
+    const querySnapshot = await getDocs(q); // gets the latest user
     if (!querySnapshot.empty) {
       const mostRecentDoc = querySnapshot.docs[0];
       setRegisteredCount(mostRecentDoc.data().count);
+      // .data() -> gets the data
+      // .count -> is a property in my document (db)
     }
   };
 
@@ -52,28 +55,31 @@ export default function App() {
 
     const querySnapshot = await getDocs(q);
 
+    // create newCount
     let newCount = 1;
 
+    // newCount becomes latest count + 1
     if (!querySnapshot.empty) {
       const mostRecentDoc = querySnapshot.docs[0];
-      newCount = mostRecentDoc.data().count + 1;
+      newCount = mostRecentDoc.data().count + 1; // count is a property in my document
     }
 
     const newDocRef = doc(
       collection(firestore, "user-email"),
       `user-${newCount}`
-    );
+    ); // doc template
 
     await setDoc(newDocRef, {
       name,
       email,
       count: newCount,
       timestamp: serverTimestamp(),
-    });
+    }); // create new doc
+
     setName("");
     setEmail("");
     setShowModal(false);
-    fetchRegisteredCount();
+    setRegisteredCount(newCount);
   };
 
   // close when user clicks outside of the modal content
@@ -137,9 +143,9 @@ export default function App() {
   };
 
   return (
-    <body className="app">
+    <div className="app">
       {/* navbar */}
-      <nav className="navbar navbar-expand-lg pt-md-4 " id="nav">
+      <nav className="navbar navbar-expand-md pt-md-4 " id="nav">
         <div className="container-fluid">
           <button
             className="navbar-toggler"
@@ -161,7 +167,7 @@ export default function App() {
               id="left-nav"
             >
               <li className="nav-item fw-bold mx-md-4">
-                <a className="nav-link" aria-current="page" href="/">
+                <a className="nav-link" aria-current="page" href="#">
                   Home
                 </a>
               </li>
@@ -170,16 +176,8 @@ export default function App() {
                   About
                 </a>
               </li>
-              <li className="nav-item fw-bold mx-md-4">
-                <button
-                  onClick={() => setShowModal(true)}
-                  className="nav-link btn btn-link"
-                >
-                  Sign Up
-                </button>
-              </li>
             </ul>
-            <button className="btn fw-bold" id="right-nav">
+            <button className="btn fw-bold nav-item" id="right-nav">
               <a className="nav-link" href="#demo-container">
                 Learn More
               </a>
@@ -210,6 +208,13 @@ export default function App() {
         <span id="dynamic-registered">{registeredCount}</span> interested
         learners
       </p>
+
+      <button
+        onClick={() => setShowModal(true)}
+        className="cta-btn nav-link btn btn-link"
+      >
+        Sign Up
+      </button>
 
       {/* about */}
       <div id="about-page" className="mt-5">
@@ -250,8 +255,8 @@ export default function App() {
             id="more-container-inner"
           >
             <p id="learn-more">Learn More: </p>
-            <a href={pdf} download="./assets/scrollwise.pdf">
-              <button id="main-cto">Download Project Description</button>
+            <a id="main-cto" href={pdf} download="./assets/scrollwise.pdf">
+              <button>Download Project Description</button>
             </a>
           </div>
         </div>
@@ -322,6 +327,6 @@ export default function App() {
         </div>
         <div>Team Illumin</div>
       </footer>
-    </body>
+    </div>
   );
 }
