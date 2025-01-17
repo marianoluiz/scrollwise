@@ -6,7 +6,9 @@ Welcome to ScrollWise, a web3 platform designed to transform mindless scrolling 
 
 ![ScrollWise Website Landing Page](/public/scrollwise-proj.png)
 
-`Note: this project is the pre-registration of the upcoming ScrollWise App`
+`Note: this project is the pre-registration website landing page of the upcoming ScrollWise App`
+
+Visit: https://scrollwise.vercel.app/
 
 This Project was made during the Hooked Unitour Hackathon Philippines 2023 hosted by Web3PH
 
