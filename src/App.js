@@ -191,7 +191,7 @@ export default function App() {
       <div
         className="container-fluid w-100 mt-4 bg-primary"
         id="landing-design"
-        style={{backgroundColor: '#9BEC00'}}
+        style={{background: '#9BEC00'}}
       >
         <div className="scrollwise-set1">
           <div className="scrollwise-style1"></div>
