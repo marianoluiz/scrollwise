@@ -69,7 +69,7 @@ export default function App() {
       `user-${newCount}`
     ); // doc template
 
-    await setDoc(newDocRef, {
+    setDoc(newDocRef, {
       name,
       email,
       count: newCount,
