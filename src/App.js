@@ -189,9 +189,8 @@ export default function App() {
 
       {/* landing page design */}
       <div
-        className="container-fluid w-100 mt-4 bg-primary"
+        className="container-fluid w-100 mt-4"
         id="landing-design"
-        style={{background: '#9BEC00'}}
       >
         <div className="scrollwise-set1">
           <div className="scrollwise-style1"></div>
